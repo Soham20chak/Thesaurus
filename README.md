@@ -53,39 +53,7 @@ Contribute for hacktoberfest 2022<br />
 - Create a pull request
 - Star this repository
 
-# How to make your first Pull Request
 
-Replace `<YOUR-USERNAME>` with your GitHub username in this guide.
-
-
-
-## 1. Create / Upload Your Code / Algorithms
-
-Create/Upload your code in folder following the convention `Add Code Here`
-- Choose an extact lanaguage folder `drop your code`
-- Below is `an example` to add file properly
-- You can follow up `any languages`
-```
-Add Code Here/PYTHON/<YOUR-FILERNAME>.py
-```
-```
-Add Code Here/C++/<YOUR-FILERNAME>.cpp
-```
-You can follow any pathway a `code` or `profile information`
-
-## 2. Wait for Pull Request to merge
-
-## 3. Celebrate - you've done your first pull request!!!!!
-
-```py
-Always make more then 4 pull requests.
-Lets say you have made only 4 pull request to different projects,
-but one project is excluded from hackoctoberfest event then your pull request will not be counted and 
-then you have remaining 3 valid pull requests if these projects is not excluded.
-If you fail to make 4 pull requests then you can't get swags or t-shirts.
-I will recommend you to make pull request to your own repo which is very very safest side for you..
-keep in mind that repo has hacktoberfest topic..
-```
 
 
 <p align="center">
@@ -161,7 +129,39 @@ We continually evaluate all of the checks except the [PARTICIPATING] check. If i
 
 After the 7-day review period completes, your PR/MR will be automatically accepted for Hacktoberfest assuming it still passes all the checks. Once accepted for Hacktoberfest, we stop checking. :party:
 ~~~
+# How to make your first Pull Request
 
+Replace `<YOUR-USERNAME>` with your GitHub username in this guide.
+
+
+
+## 1. Create / Upload Your Code / Algorithms
+
+Create/Upload your code in folder following the convention `Add Code Here`
+- Choose an extact lanaguage folder `drop your code`
+- Below is `an example` to add file properly
+- You can follow up `any languages`
+```
+Add Code Here/PYTHON/<YOUR-FILERNAME>.py
+```
+```
+Add Code Here/C++/<YOUR-FILERNAME>.cpp
+```
+You can follow any pathway a `code` or `profile information`
+
+## 2. Wait for Pull Request to merge
+
+## 3. Celebrate - you've done your first pull request!!!!!
+
+```py
+Always make more then 4 pull requests.
+Lets say you have made only 4 pull request to different projects,
+but one project is excluded from hackoctoberfest event then your pull request will not be counted and 
+then you have remaining 3 valid pull requests if these projects is not excluded.
+If you fail to make 4 pull requests then you can't get swags or t-shirts.
+I will recommend you to make pull request to your own repo which is very very safest side for you..
+keep in mind that repo has hacktoberfest topic..
+```
 
 
 <tr><td align="center"><a href="https://github.com/Soham20chak"><kbd><img src="https://avatars3.githubusercontent.com/Soham20chak?size=100" width="100px;" alt=""/></kbd><br /><sub><b>Soham Chakraborty</b></sub></a><br /></td>
