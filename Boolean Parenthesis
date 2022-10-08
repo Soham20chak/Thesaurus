@@ -1,0 +1,107 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int solve(string s,int i,int j,int istrue){
+	if(i>j){
+		return 0;
+	}
+	if(i==j){
+		if(istrue) return s[i]=='T';
+		else return s[i]=='F';
+	}
+	int ans=0;
+	for(int k=i+1;k<=j-1;k=k+2){
+		int leftT=solve(s,i,k-1,1);
+		int leftF=solve(s,i,k-1,0);
+		int rightT=solve(s,k+1,j,1);
+		int rightF=solve(s,k+1,j,0);
+		if(s[k]=='&'){
+			if(istrue){
+				ans+=(leftT*rightT);
+			}
+			else{
+				ans+=(leftF*rightT)+(leftT*rightF)+(leftF*rightF);
+			}
+		}else if(s[k]=='^'){
+			if(istrue){
+				ans+=(leftT*rightF)+(leftF*rightT);
+			}
+			else{
+				ans+=(leftT*rightT)+(leftF*rightF);
+			}
+		}else if(s[k]=='|'){
+			if(istrue){
+				ans+=(leftF*rightT)+(leftT*rightF)+(leftT*rightT);
+			}
+			else{
+				ans+=(leftF*rightF);
+			}
+		}
+	}
+	return ans;
+	
+}
+//memoization
+int dp[205][205][2];
+//memset(dp,-1,sizeof(dp));
+int solvemem(string s,int i,int j,int istrue){
+	if(i>j){
+		return 0;
+	}
+	if(i==j){
+		if(istrue) return s[i]=='T';
+		else return s[i]=='F';
+	}
+	if(dp[i][j][istrue]!=-1)
+        return dp[i][j][istrue];
+	int ans=0;
+	for(int k=i+1;k<j;k=k+2){
+		int leftT,leftF,rightT,rightF;
+            
+        if(dp[i][k-1][1]==-1)
+            leftT=solvemem(s,i,k-1,1);
+        else leftT=dp[i][k-1][1];
+            
+        if(dp[i][k-1][0]==-1)
+            leftF=solvemem(s,i,k-1,0);
+        else leftF=dp[i][k-1][0];
+            
+        if(dp[k+1][j][1]==-1)
+            rightT=solvemem(s,k+1,j,1);
+        else rightT=dp[k+1][j][1];
+            
+        if(dp[k+1][j][0]==-1)
+            rightF=solvemem(s,k+1,j,0);
+        else rightF=dp[k+1][j][0];
+		if(s[k]=='&'){
+			if(istrue){
+				ans+=(leftT*rightT);
+			}
+			else{
+				ans+=(leftF*rightT)+(leftT*rightF)+(leftF*rightF);
+			}
+		}else if(s[k]=='^'){
+			if(istrue){
+				ans+=(leftT*rightF)+(leftF*rightT);
+			}
+			else{
+				ans+=(leftT*rightT)+(leftF*rightF);
+			}
+		}else if(s[k]=='|'){
+			if(istrue){
+				ans+=(leftF*rightT)+(leftT*rightF)+(leftT*rightT);
+			}
+			else{
+				ans+=(leftF*rightF);
+			}
+		}
+	}
+	return dp[i][j][istrue]=ans;
+	
+}
+int main(){
+	string s="T^F&T";
+//	cout<<solve(s,0,s.length()-1,1)<<endl;
+	memset(dp,-1,sizeof(dp));
+	cout<<solvemem(s,0,s.length()-1,1)<<endl;
+}
