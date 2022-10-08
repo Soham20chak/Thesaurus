@@ -18,8 +18,8 @@ Contribute for hacktoberfest 2022<br />
 
 <div align="center">
 
-<a href="https://github.com/ossamamehmood/Hacktoberfest2022/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ossamamehmood/Hacktoberfest2022" />
+<a href="https://github.com/Soham20chak/Thesaurus/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Soham20chak/Thesaurus" />
 </a>
   
   </div>
