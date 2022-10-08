@@ -10,7 +10,7 @@ Contribute for hacktoberfest 2022<br />
 
 <br />
 
-# Hacktoberfest 2022 `OPEN FIRST` Pull Request - `FREE T-SHIRT`🎉
+# Hacktoberfest 2022 
 ![Hacktoberfest 2021](.github/logo.png)
 
 
@@ -122,6 +122,6 @@ keep in mind that repo has hacktoberfest topic..
 To get approval of the pull request much quicker and faster (`Follow Me`)🚀
 ```
 
-<tr><td align="center"><a href="https://github.com/ossamamehmood"><kbd><img src="https://avatars3.githubusercontent.com/ossamamehmood?size=100" width="100px;" alt=""/></kbd><br /><sub><b>Ossama Mehmood</b></sub></a><br /></td>
+<tr><td align="center"><a href="https://github.com/Soham20chak"><kbd><img src="https://avatars3.githubusercontent.com/Soham20chak?size=100" width="100px;" alt=""/></kbd><br /><sub><b>Soham Chakraborty</b></sub></a><br /></td>
 
 </tr>
