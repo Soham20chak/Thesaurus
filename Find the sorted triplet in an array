@@ -1,0 +1,66 @@
+#include <iostream>
+#include <vector>
+#include <tuple>
+using namespace std;
+bool findTriplet(vector<int> const &arr, auto &tuple)
+{
+    int n = arr.size();
+    if (n < 3) {
+        return false;
+    }
+    vector<int> min(n, -1);
+    int min_index_so_far = 0;
+    for (int i = 1; i < n; i++)
+    {
+        if (arr[i] < arr[min_index_so_far]) {
+            min_index_so_far = i;
+        }
+        else if (arr[i] > arr[min_index_so_far]) {
+            min[i] = min_index_so_far;
+        }
+    }
+ 
+    vector<int> max(n, -1);
+    int max_index_so_far = n - 1;
+ 
+    for (int i = n - 2; i >= 0; i--)
+    {
+        if (arr[i] > arr[max_index_so_far]) {
+            max_index_so_far = i;
+        }
+        else if (arr[i] < arr[max_index_so_far]) {
+            max[i] = max_index_so_far;
+        }
+    }
+ 
+    for (int i = 0; i < n; i++)
+    {
+        if (min[i] != -1 && max[i] != -1)
+        {
+            tuple = make_tuple(min[i], i, max[i]);
+            return true;
+        }
+    }
+    return false;
+}
+ 
+int main()
+{
+    
+    vector<int> input = { 5, 4, 3, 7, 6, 1, 9 };
+ 
+    tuple<int, int, int> triplet;
+ 
+    if (findTriplet(input, triplet))
+    {
+        cout << "Triplet found: ("
+             << input[get<0>(triplet)] << ", "
+             << input[get<1>(triplet)] << ", "
+             << input[get<2>(triplet)] << ")";
+    }
+    else {
+        cout << "Triplet not found";
+    }
+ 
+    return 0;
+}
